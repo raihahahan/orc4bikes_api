@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8030:8000"
+    volumes:
+      - .:/app
+      - ./.env/:/app/.env
+      - ./data.json:/app/data.json
